@@ -34,5 +34,4 @@ public class Throw : MonoBehaviour
         Vector2 throwDirection = new Vector2(Random.Range(-throwAngle,throwAngle), 1f).normalized; // Tilfældig retning indad opad
         rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
     }
-
 }
