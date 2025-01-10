@@ -8,6 +8,10 @@ public class Throw : MonoBehaviour
 
     public float throwAngle;
 
+    void Start(){
+        //StartCoroutine(WaitSeconds);
+    }
+
     void Update()
     {
         // Tjek om brugeren trykker på musens venstre knap
