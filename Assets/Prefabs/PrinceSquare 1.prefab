@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4668177760854502592}
   - component: {fileID: 8620739282066500512}
   m_Layer: 0
-  m_Name: PrinceSquare
+  m_Name: PrinceSquare 1
   m_TagString: NigerianPrince
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2751413403973646099, guid: 04e0a2d8d23adee468a0cef98a6324d1, type: 3}
-  m_Color: {r: 0.5018867, g: 0.5018867, b: 0.5018867, a: 1}
+  m_Color: {r: 0.03621483, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

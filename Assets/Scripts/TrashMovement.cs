@@ -22,11 +22,12 @@ public class TrashMovement : MonoBehaviour
     void Update()
     {
         // Hent input fra piletasterne (eller A/D-tasterne som alternativ)
-        moveInput = Input.GetAxisRaw("Horizontal");
+        
     }
 
     void FixedUpdate()
     {
+        moveInput = Input.GetAxisRaw("Horizontal");
         // Hvis der er input (brugeren holder en tast nede)
         if (moveInput != 0)
         {

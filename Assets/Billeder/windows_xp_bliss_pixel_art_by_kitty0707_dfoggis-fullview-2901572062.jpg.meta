@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bdfb3be19ad6a0e4f83b36893921f372
+guid: a7bd3f75d69ad434e946eb87614434a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2835008019807597138
-    second: "S\xF8d kat_0"
+      213: -3816348662415177762
+    second: windows_xp_bliss_pixel_art_by_kitty0707_dfoggis-fullview-2901572062_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "S\xF8d kat_0"
+      name: windows_xp_bliss_pixel_art_by_kitty0707_dfoggis-fullview-2901572062_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 700
-        height: 587
+        width: 1280
+        height: 720
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ead0cfbf93708a8d0800000000000000
-      internalID: -2835008019807597138
+      spriteID: ed7c4b58c1b990bc0800000000000000
+      internalID: -3816348662415177762
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "S\xF8d kat_0": -2835008019807597138
+      windows_xp_bliss_pixel_art_by_kitty0707_dfoggis-fullview-2901572062_0: -3816348662415177762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

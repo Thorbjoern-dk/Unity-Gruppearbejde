@@ -15,4 +15,5 @@ public class DestroyMyself : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }
