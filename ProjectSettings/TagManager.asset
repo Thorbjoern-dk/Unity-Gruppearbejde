@@ -8,6 +8,7 @@ TagManager:
   - Bait
   - Collect
   - NigerianPrince
+  - Ground
   layers:
   - Default
   - TransparentFX

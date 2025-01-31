@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TrashMovement : MonoBehaviour
+public class BasketMovement : MonoBehaviour
 {
 
     public bool startCheck;
