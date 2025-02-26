@@ -16,7 +16,7 @@ public class ScoreManagement : MonoBehaviour
     public static int overførKatCounter; // Variablen der overføres
     public static int overførNigerCounter; // Variablen der overføres
 
-
+    public float KatShow;
 
     
 
@@ -25,34 +25,29 @@ public class ScoreManagement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        overførKatCounter = 0;
+        overførNigerCounter = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        KatShow = overførKatCounter;
+
         if (transform.position.y > 2)
         {
-            SceneManager.LoadScene("Fishing Scene");
+            Throw.OverførtKatte = overførKatCounter;
+            Throw.OverførtPrince = overførNigerCounter;
             hasSwitchedScene = true;
+            SceneManager.LoadScene("Fishing Scene");
+
 
         }
         if(hasSwitchedScene){
             transform.position = new Vector3(100,100,100);
         }
     }
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {

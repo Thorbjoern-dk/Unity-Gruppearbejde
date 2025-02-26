@@ -10,6 +10,8 @@ public class Throw : MonoBehaviour
     public static float OverførtKatte;
     public static float OverførtPrince;
 
+    public float showKat;
+
     
 
     public GameObject objectToSpawn; // Det gameobjekt, der skal instantiateres
@@ -34,71 +36,52 @@ public class Throw : MonoBehaviour
     void FixedUpdate()
     {
         // Tjek om brugeren trykker på musens venstre knap
+        showKat = OverførtKatte;
 
     }
 
-    void SpawnAndThrowObjectFromRight()
+        void SpawnAndThrowObject()
     {
-        // Instantiate gameobjektet på den angivne position
-        GameObject spawnedObject = null;
-        if (Mathf.Round(Random.Range(1,4)) == 2){
-            spawnedObject = Instantiate(objectToSpawn2, spawnPosition1, Quaternion.identity);
-        } else if (Mathf.Round(Random.Range(1,3)) == 2){
+        
+
+        if(Random.value > 0.5f && OverførtPrince>=0){//spawn prince
+            GameObject spawnedObject = null;
             spawnedObject = Instantiate(objectToSpawn, spawnPosition1, Quaternion.identity);
-        } else {
-            spawnedObject = Instantiate(Kitty, spawnPosition1, Quaternion.identity);
-        }
-        Debug.Log("Right");
-        // Tjek om objektet har en Rigidbody2D-komponent
-        Rigidbody2D rb = spawnedObject.GetComponent<Rigidbody2D>();
-        if (rb == null)
-        {
-            // Tilføj en Rigidbody2D-komponent, hvis den mangler
-            rb = spawnedObject.AddComponent<Rigidbody2D>();
-        }
-
-        // Kast objektet ind på skærmen med en kraft
-        Vector2 throwDirection = new Vector2(Random.Range(throwAngleMin, throwAngleMax), 1f).normalized; // Tilfældig retning indad opad
-        rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
-    }
-
-
-
-        void SpawnAndThrowObjectFromLeft()
-    {
-        // Instantiate gameobjektet på den angivne position
-        GameObject spawnedObject = null;
-        if (Mathf.Round(Random.Range(1,4)) == 2){
-            spawnedObject = Instantiate(objectToSpawn2, spawnPosition2, Quaternion.identity);
-        } else if (Mathf.Round(Random.Range(1,3)) == 2){
-            spawnedObject = Instantiate(objectToSpawn, spawnPosition2, Quaternion.identity);
-        } else {
+            Rigidbody2D rb = spawnedObject.GetComponent<Rigidbody2D>();
+            if(Random.value > 0.5f){ //spawn venstre
+                spawnedObject.transform.position = spawnPosition2;
+                Vector2 throwDirection = new Vector2(Random.Range(-throwAngleMin, -throwAngleMax), 1f).normalized; 
+                rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+            }else{//spawn til højre
+                spawnedObject.transform.position = spawnPosition1;
+                Vector2 throwDirection = new Vector2(Random.Range(throwAngleMin, throwAngleMax), 1f).normalized; 
+                rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+            }
+            OverførtPrince = OverførtPrince -1;
+        } else if(OverførtKatte>=0){//spawn Cat
+            GameObject spawnedObject = null;    
             spawnedObject = Instantiate(Kitty, spawnPosition2, Quaternion.identity);
+            Rigidbody2D rb = spawnedObject.GetComponent<Rigidbody2D>();
+            if(Random.value > 0.5f){ //spawn venstre
+                spawnedObject.transform.position = spawnPosition2;
+                Vector2 throwDirection = new Vector2(Random.Range(-throwAngleMin, -throwAngleMax), 1f).normalized;
+                rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+            }else{//spawn til højre
+                spawnedObject.transform.position = spawnPosition1;
+                Vector2 throwDirection = new Vector2(Random.Range(throwAngleMin, throwAngleMax), 1f).normalized;
+                rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
+            }
+            OverførtKatte = OverførtKatte -1;
         }
-        Debug.Log("Left");
 
-        // Tjek om objektet har en Rigidbody2D-komponent
-        Rigidbody2D rb = spawnedObject.GetComponent<Rigidbody2D>();
-        if (rb == null)
-        {
-            // Tilføj en Rigidbody2D-komponent, hvis den mangler
-            rb = spawnedObject.AddComponent<Rigidbody2D>();
-        }
 
-        // Kast objektet ind på skærmen med en kraft
-        Vector2 throwDirection = new Vector2(Random.Range(-throwAngleMin, -throwAngleMax), 1f).normalized; // Tilfældig retning indad opad
-        rb.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
     }
 
     IEnumerator SpawnObjectEveryFiveSeconds()
     {
-        while (true) // Loop for at køre kontinuerligt
+        while (OverførtKatte + OverførtPrince > 0) // Loop for at køre kontinuerligt
         {
-            if(Random.value > 0.5f){
-                SpawnAndThrowObjectFromRight();
-            } else{
-                SpawnAndThrowObjectFromLeft();
-            }
+            SpawnAndThrowObject();
             yield return new WaitForSeconds(TimeBetweenThrow); 
         }
     }

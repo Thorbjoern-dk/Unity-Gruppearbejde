@@ -8,6 +8,8 @@ public class Desacelerate : MonoBehaviour
     private Transform targetTransform; // Referencen til det objekt, der skal følges
     private bool isFollowing = false; // Om objektet skal følge mål-objektet
 
+    public BoxCollider2D bc;
+
 
     void Start()
     {
@@ -29,8 +31,7 @@ public class Desacelerate : MonoBehaviour
         {
             targetTransform = other.transform; // Gem referencen til objektets transform
             isFollowing = true; // Aktivér følgetilstand
-
-            
+            bc.enabled = false;
             
         }
     }

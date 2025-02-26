@@ -805,8 +805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c083ce592017147b74f4fe56b803d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "overf\xF8rKatCounter": 0
-  "overf\xF8rNigerCounter": 0
+  KatShow: 0
 --- !u!1 &1368471492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drag: 0
+  bc: {fileID: 0}
 --- !u!114 &4070556311429780747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,6 +1870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drag: 2
+  bc: {fileID: 4124147261355729991}
 --- !u!61 &4124147261355729991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2112,6 +2113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drag: 2
+  bc: {fileID: 6722165713120086817}
 --- !u!50 &7534986976939880483
 Rigidbody2D:
   serializedVersion: 5
