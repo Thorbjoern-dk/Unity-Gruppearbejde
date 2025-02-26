@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Slice Scene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Catching Scene.unity
+    guid: c156f66fa9cf9ee48b15d7aa1d8a94a5
+  - enabled: 1
+    path: Assets/Scenes/Fishing Scene.unity
+    guid: f44e949035df5a54dbf18b079da4514d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

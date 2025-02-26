@@ -9,6 +9,8 @@ TagManager:
   - Collect
   - NigerianPrince
   - Ground
+  - Cat
+  - NigerBait
   layers:
   - Default
   - TransparentFX

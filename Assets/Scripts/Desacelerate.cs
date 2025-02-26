@@ -1,11 +1,13 @@
 using UnityEngine;
 
+
 public class Desacelerate : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float Drag;
     private Transform targetTransform; // Referencen til det objekt, der skal følges
     private bool isFollowing = false; // Om objektet skal følge mål-objektet
+
 
     void Start()
     {
@@ -22,13 +24,14 @@ public class Desacelerate : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Kollideret");
         // Tjek, om det rørte objektet har tagget "Fiskekrog"
         if (other.CompareTag("Fiskekrog"))
         {
-            Debug.Log("Kollideret med krog");
             targetTransform = other.transform; // Gem referencen til objektets transform
             isFollowing = true; // Aktivér følgetilstand
+
+            
+            
         }
     }
 
@@ -38,7 +41,7 @@ public class Desacelerate : MonoBehaviour
         if (isFollowing && targetTransform != null)
         {
             transform.position = targetTransform.position;
-            Debug.Log("Følger objektet: " + targetTransform.name);
+            
         }
     }
 }

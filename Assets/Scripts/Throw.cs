@@ -1,8 +1,17 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+using System.IO.Ports;
 using System.Collections;
 
 public class Throw : MonoBehaviour
 {
+    public static float OverførtKatte;
+    public static float OverførtPrince;
+
+    
+
     public GameObject objectToSpawn; // Det gameobjekt, der skal instantiateres
     public GameObject objectToSpawn2; // Det gameobjekt, der skal instantiateres
     public GameObject Kitty; // Det gameobjekt, der skal instantiateres
