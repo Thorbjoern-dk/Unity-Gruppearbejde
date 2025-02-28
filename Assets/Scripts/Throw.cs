@@ -46,7 +46,12 @@ public class Throw : MonoBehaviour
 
         if(Random.value > 0.5f && OverførtPrince>=0){//spawn prince
             GameObject spawnedObject = null;
-            spawnedObject = Instantiate(objectToSpawn, spawnPosition1, Quaternion.identity);
+            if(Random.Range(0,2)==1){
+                spawnedObject = Instantiate(objectToSpawn, spawnPosition1, Quaternion.identity);
+            } else{
+                spawnedObject = Instantiate(objectToSpawn2, spawnPosition1, Quaternion.identity);
+            }
+            
             Rigidbody2D rb = spawnedObject.GetComponent<Rigidbody2D>();
             if(Random.value > 0.5f){ //spawn venstre
                 spawnedObject.transform.position = spawnPosition2;

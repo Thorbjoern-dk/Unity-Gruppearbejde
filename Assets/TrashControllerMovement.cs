@@ -49,11 +49,11 @@ public class TrashControllerMovement : MonoBehaviour
                 string data = serialPort.ReadLine().Trim();
                 Debug.Log("Received: " + data); // Debug for at se input
                 if (data == "LEFT") {
-                    moveInput = Mathf.Lerp(moveInput, -5f, Time.deltaTime * turnSpeed);
+                    moveInput = Mathf.Lerp(moveInput, -10f, Time.deltaTime * turnSpeed);
                     
                 } 
                 else if (data == "RIGHT") {
-                    moveInput = Mathf.Lerp(moveInput, 5f, Time.deltaTime * turnSpeed);
+                    moveInput = Mathf.Lerp(moveInput, 10f, Time.deltaTime * turnSpeed);
                 } else{
                     Debug.Log("null");
                 }
@@ -82,5 +82,6 @@ public class TrashControllerMovement : MonoBehaviour
             currentSpeed = Mathf.MoveTowards(currentSpeed, moveInput, acceleration * Time.fixedDeltaTime);
         }
         rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
+        moveInput = moveInput * Time.deltaTime * 40;
     }
 }

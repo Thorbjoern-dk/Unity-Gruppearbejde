@@ -5084,7 +5084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showKat: 0
-  objectToSpawn: {fileID: 4714940834486461642, guid: f22dfe111c9a4e7438e923a07c0bb6d1, type: 3}
+  objectToSpawn: {fileID: 2001921010980807535, guid: fe6d5da874168ac48a3a147eba3473be, type: 3}
   objectToSpawn2: {fileID: 2001921010980807535, guid: 16dd5c843e77ae94688ab11f33e0063b, type: 3}
   Kitty: {fileID: 3059427113794044935, guid: c464b7a1344194d458a7b51f356fc668, type: 3}
   throwForce: 10
@@ -5127,7 +5127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -467.71, y: 16.8}
+  m_AnchoredPosition: {x: -467.71, y: -30.900013}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &500182918
@@ -5343,7 +5343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -531.7, y: 50.2}
+  m_AnchoredPosition: {x: -531.7, y: 2.4999886}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538195207
@@ -5880,7 +5880,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Brug skraldespanden til at fange scams og reklamer
+  m_text: 'Brug skraldespanden til at fange scams og reklamer. Tryk for at skifte
+    til kurv for at fange katte. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -6130,7 +6131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -531.7, y: 81.7}
+  m_AnchoredPosition: {x: -531.7, y: 34}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314328495
@@ -6266,7 +6267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -181.2, y: 48.7}
+  m_AnchoredPosition: {x: -181.2, y: 0.99998856}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399973509
@@ -6404,7 +6405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 81}
+  m_AnchoredPosition: {x: -167, y: 33.299988}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416571971
@@ -6729,7 +6730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -531.7, y: 19.42}
+  m_AnchoredPosition: {x: -531.7, y: -28.280012}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881990459
@@ -7013,7 +7014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveInput: 0.1
-  acceleration: 30
+  acceleration: 100
   turnSpeed: 80
   startCheck: 1
   SwapTransform: {fileID: 1911126663}
